@@ -1,274 +1,268 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/11/first-blog/" class="article-date">
-  <time class="dt-published" datetime="2024-07-11T02:30:05.000Z" itemprop="datePublished">2024-07-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/11/first-blog/">first blog！！</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-        
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/11/first-blog/" data-id="clygnvuiy0000jote8gzkc2ne" data-title="first blog！！" class="article-share-link"><span class="fa fa-share">Share</span></a>
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
       
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
       
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%83%E4%B9%A0/" rel="tag">-练习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/10/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-10T07:53:50.055Z" itemprop="datePublished">2024-07-10</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2025-06-03 13:31:34'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/15/%E5%BD%93kali%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93%E5%BC%80%E6%97%B6%E6%B2%A1%E8%AE%BE%E7%BD%AE%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F/" title="当kali第一次打开时没设置账号密码怎么办？">当kali第一次打开时没设置账号密码怎么办？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-15T02:48:36.000Z" title="Created 2024-09-15 10:48:36">2024-09-15</time></span></div><div class="content">第一种方法直接输入 sudo passwd root设置root密码
+第二种开机时按 e进入grub编辑模式在linux尾部位置添加下面命令rw single init&#x3D;&#x2F;bin&#x2F;bash
+切记：要与前面的文本隔开一个空格！接下来，我们点击ctrl+x来保存，接着会进入单用户模式
+输入 sudo passwd root输入密码然后重启
+参考文档：https://blog.csdn.net/weixin_46164380/article/details/104615467?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E5%88%9A%E5%88%9B%E5%BB%BA%E7%9A%84kali%E6%B2%A1%E8%AE%A9%E6%88%91%E5%88%9B%E5%BB%BA%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/15/%E5%9C%A8vmware%E4%B8%AD%E5%AE%89%E8%A3%85kail%E8%93%9D%E5%B1%8F%E4%B8%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="在vmware中安装kail蓝屏且无法打开问题解决">在vmware中安装kail蓝屏且无法打开问题解决</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-15T02:28:11.000Z" title="Created 2024-09-15 10:28:11">2024-09-15</time></span></div><div class="content">#参考文档物理硬件设置：https://blog.csdn.net/m0_74063149/article/details/137725577?ops_request_misc=%257B%2522request%255Fid%2522%253A%25227B04DF1B-795B-4F3A-81C0-EA4B42C9ED46%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=7B04DF1B-795B-4F3A-81C0-EA4B42C9ED46&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-137725577-null-null.142^v100^pc_search_result_base7&amp;utm_term=vmware%E6%9C%AA%E8%83%BD%E5%90%AF%E5%8A%A8%E8%99%9A%E6%8B ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/12/%E5%85%B3%E4%BA%8EJDK%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%98%93%E9%94%99%E7%82%B9/" title="关于JDK配置的个人易错点">关于JDK配置的个人易错点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-12T02:02:29.000Z" title="Created 2024-09-12 10:02:29">2024-09-12</time></span></div><div class="content">理解Path和JAVA_HOME之间的关系在环境编辑器中首先要写入一个JAVA_HOME  在JAVA_HOME中应该配置jdk的bin目录的地址
+在环境编辑器中其次要引用JAVA_HOME进path使得环境变量起到效果第一步下载且安装JDK  &lt;通过网盘分享的文件：jdk-8u251-windows-x64.exe链接: https://pan.baidu.com/s/1jbhRCDvHmnnKH3fI6NrCaw?pwd=8888 提取码: 8888&gt;  无脑Next
+注意事项:  1.JDK的安装路径一定要清楚  2.JRE也需要选择安装路径，但是不影响jdk使用可以放在JDK里也可以放在外面
+第二步配置环境变量打开设置，搜索编辑系统环境变量（注意所有的环境变量要在系统变量里面写）  如图所示JAVA_HOME里面放进去jdk\bin的路径，path里面引用JAVA_HOME  图片仅仅是参考，具体的路径看你们自己的安装路径
+ 
+ 
+ 
+最后检查自己的环境配置对不对   win+r 输入cmd 输入javac 或者 Java -version
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/23/Sqli-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/" title="Sqli-labs通关记录">Sqli-labs通关记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-08-23T15:22:54.000Z" title="Created 2024-08-23 23:22:54">2024-08-23</time></span></div><div class="content">第一关‘检查闭环输入?id=1 正常输入?id=1&#39;  报错 ‘ .0 ‘输入?id=1&#39;--+ 正常判断是字符型注入，闭合方式是’总结：在sql注入里如果后面跟上’出现了报错，说明此程序存在sql注入的可能性
+我的困扰图片中出现了五个问题1.order by 有什么作用？排序作用如order by 2的作用就是根据表的第二列来排序2.？id&#x3D;1’ and 1&#x3D;2 怎么理解？为什么1要&#x3D;2？首先单’可以如若报错说明此处是sql注入闭环的漏洞，其次1&#x3D;2是一种绕开条件的方式 在and的时候两边只要有一边是假，就会返回假，自然select查询也就会报错，返回值就是空了，从而继续对下一步进行查询了3.union select是什么功能？union select 可以把查询到的数据结合在一起4.group_concat如图可以把name作为查找条件，然后把查找到的信息通过自己想要的方式分隔，和在一行中此功能可以
+第二关何为数字型注入？
+查询出有哪些数据库
+查找出有哪些表在上一步有个数据库很特别ctfshow，肯定就是他有问题查找出这个数据 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/17/%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1codewave%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="如何设计codewave低代码程序表格的增删改查">如何设计codewave低代码程序表格的增删改查</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-17T02:50:27.000Z" title="Created 2024-07-17 10:50:27">2024-07-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">-前端页面</a></span></div><div class="content">首先插入一个面板在测试页面上（新建测试页面），在20：4的栅格栏里面添加两个文本，两个单行输入，再添加两个按钮：查询和新增供应商然后新建一个逻辑loadSupplier，拖入一个数据查询，查询内容添加suppler；再把数据查询拖入分页对象，分页对象里面的两个page和size参数需要在loadSuppllier下新建，新建为输入变量。最后再在loadSupplier里面新建输出变量result把result拖入程序，把分页对象拖如result。返回测试页面，添加五个表格列，第一列设置为序号列，第二行设置为供应商编号，第三行设置为供应商名称，第四行设置为·供应商状态，第五行设置为操作加入两个链接修改和删除，然后再在每列文本中绑定current&#x2F;item&#x2F;suppler&#x2F;下的对应文件加入一个弹窗到页面上，根据图片那样设置，注意有些必须要填写的信息内容可以在表单属性里面选择必填接着如同以前那样在新建的按钮上增加一个click的事件，在事件内添加打开model_opean然后再弹窗组件的边上添加一个文本文本内容用和弹窗一样的input.name,这样就可以测试是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8codewave%E4%BD%8E%E4%BB%A3%E7%A0%81%E7%A8%8B%E5%BA%8F%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AAPC%E7%AB%AF%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/" title="如何使用codewave低代码程序完成一个PC端前端页面">如何使用codewave低代码程序完成一个PC端前端页面</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-15T05:45:27.000Z" title="Created 2024-07-15 13:45:27">2024-07-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">-前端页面</a></span></div><div class="content">最近在学习codewave低代码，现在就记录一下初级工程师需要学会什么
+了解codewave访问链接在此，可以通过手机号码注册一个账号然后再了解codewavehttps://community.codewave.163.com/CommunityParent/learncenter
+第一个codewave前端项目：采购管理系统内容包含三个子页面和一个主页面
+主页面这个是我设计的主页面，主要通过线性布局 阑珊布局分布区间，然后往画布里面添加内容即可
+子页面的共同区域通过线性布局和栅格化两个区域 一个4格一个默认格，在四格的位置加上文本，文本内容采购管理 并且设置栅格列右边有一个4大小的边框。在另外一个栅格列里面加入一个面包屑第三种样式，删掉不需要的内容，把供应商管理打上，并且留下两个图标。以上是三个子页面共同的地方，可以复制粘贴。
+供应商管理下的逻辑运算知识加入两个数字输入组件，和三个文本：+ &#x3D; 和存放结果的文本并在该子页面添加两个int类的变量，生命周期当然也是只在该子页面把两个数字输入组件分别绑定variabl1和variab2在最后的结果文本中添加内容为逻辑相加两个框 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/11/first-blog/" title="first blog！！">first blog！！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-11T02:30:05.000Z" title="Created 2024-07-11 10:30:05">2024-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a></span></div><div class="content">Welcome to my blog! This is my first blog, but not my last blog. This blog will revolve around how I created a blog based on hexo and sent it. Also some of my little learning experience.
+Git and Node链接：https://pan.baidu.com/s/1p80wxB4nA45LzgiqbOYZRA?pwd=6666提取码：6666This package has two apps Git-2.37.1-64-bit and node-v16.16.0-x64.Just like you mind,next next and next.But you’d better remember where to download it from.
+install HexoEnter cmd input order1npm install -g hexo-cli
+Creat a folder on t ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/11/Sql%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/" title="sqli-labs学习">sqli-labs学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-11T02:30:05.000Z" title="Created 2024-07-11 10:30:05">2024-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a></span></div><div class="content">安装PHPstudy 运行sqli-labsPHPstudy安装地址qli-labs安装地址 百度网盘： 提取码：xrsc第一步先把sqli-labs安装在小皮的www目录下第二部再安装PHPstudy，只需要一直next，随后先后启动阿帕奇服务，mysql服务。然后新建一个网站域名写入127.0.0.1，版本选择5.3.29，根目录写成www目录下的sqli-labs。# 修改数据库文件用笔记本打开 sql-connections\db-creds.inc，在这里设置连接你phpstudy的MySQL的用户名密码和数据库名称，通常用户名密码是 root : root，具体要根据你的数据库的设置而定，数据库名这里默认是security，尽量不要改# 启动靶场网站-》管理-》打开网站出现页面后点击第一个链接到这里就成功配置好了sqli-labs了 明天再来闯关哈哈，今天乏了1：58了连接数据库学习的第一步是连接数数据库，在小皮自带的mysql文件里 输入cmd打开cmd命令窗口输入 .\mysql.exe -uroot -p 密码和账号都在小皮里可查
+数据库的基本命令然后在数据库中可以使 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/11/%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83hexo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" title="发布我们的第一篇博客 &quot;Hello Blog&quot;">发布我们的第一篇博客 &quot;Hello Blog&quot;</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-11T02:30:05.000Z" title="Created 2024-07-11 10:30:05">2024-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a></span></div><div class="content">有些小伙伴们已然成功搭建博客，也更换了主题，那么如何发布第一条博客呢，该做什么呢？
+一·第一步是新建一个文章在blog的目录下使用git发送一下指令1hexo new &quot;文章名&quot;
+在你生成的文件中已然生成了sourse&#x2F;_posts&#x2F;在这个文件下我们可以看见：文件名.md的文件！图片点击进如文件，可以看见文档里有几行初始内容！图片title是你的博客的名字 将会显示在你博客该文章的最顶部data：是自动生成的时间tages是标签，可以随意选择categories是文章的类别，也可以随意选择
+二·第二部是了解如何编写一个markdown文档可以在连接中学习https://blog.csdn.net/u014061630/article/details/81359144?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522172084381716800222861445%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/11/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0hexo%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98/" title="如何更新hexo网站的主题">如何更新hexo网站的主题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-11T02:30:05.000Z" title="Created 2024-07-11 10:30:05">2024-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a></span></div><div class="content">在看了我第一条博客以后，相信看这条博客的人肯定都已经成功搭建博客了，那么现在由我教你，如何去更换主题
+一·下载这是下载链接https://hexo.io/themes/，通过链接选定一个自己喜欢的主题，然后进入github，点击code —&gt;再复制https：的地址
+12cd themesgit clone https://github.com/hexojs/hexo-theme-buttleflyt.git ./buttlefly
+.&#x2F;跟在地址后的.&#x2F;buttlefly是为了区分别的主题,自己的目录里面新建一个或者一直输入代码都可 注意：这里的buttlefly和后面的Extensions模块中对应的部分需要一致
+二·让主题生效找到博客目录下的配置文件_config.yml，并且找到Extensions模块做出修改！图片然后再对hexo进行重启更新
+123hexo cleanhexo ghexo d
+或者也可以直接：
+1hexo s
+主题更新这一步可做可不做，如果主题有优化后者更新修改bug，我们可以在本地同步更新一下，博客目录下输入以下命令
+123cd . ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/15/%E5%BD%93kali%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93%E5%BC%80%E6%97%B6%E6%B2%A1%E8%AE%BE%E7%BD%AE%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F/" title="当kali第一次打开时没设置账号密码怎么办？">当kali第一次打开时没设置账号密码怎么办？</a><time datetime="2024-09-15T02:48:36.000Z" title="Created 2024-09-15 10:48:36">2024-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/15/%E5%9C%A8vmware%E4%B8%AD%E5%AE%89%E8%A3%85kail%E8%93%9D%E5%B1%8F%E4%B8%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="在vmware中安装kail蓝屏且无法打开问题解决">在vmware中安装kail蓝屏且无法打开问题解决</a><time datetime="2024-09-15T02:28:11.000Z" title="Created 2024-09-15 10:28:11">2024-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/12/%E5%85%B3%E4%BA%8EJDK%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%98%93%E9%94%99%E7%82%B9/" title="关于JDK配置的个人易错点">关于JDK配置的个人易错点</a><time datetime="2024-09-12T02:02:29.000Z" title="Created 2024-09-12 10:02:29">2024-09-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/23/Sqli-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/" title="Sqli-labs通关记录">Sqli-labs通关记录</a><time datetime="2024-08-23T15:22:54.000Z" title="Created 2024-08-23 23:22:54">2024-08-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/17/%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1codewave%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="如何设计codewave低代码程序表格的增删改查">如何设计codewave低代码程序表格的增删改查</a><time datetime="2024-07-17T02:50:27.000Z" title="Created 2024-07-17 10:50:27">2024-07-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/"><span class="card-category-list-name">-前端页面</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">-博客相关</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BB%83%E4%B9%A0%E4%B8%A4%E5%B9%B4%E5%8D%8A/" style="font-size: 1.1em; color: #999">练习两年半</a> <a href="/tags/%E7%BB%83%E4%B9%A0%E4%B8%A4%E5%B9%B4%E5%8D%8A/" style="font-size: 1.5em; color: #99a9bf">-练习两年半</a> <a href="/tags/CodeWave%E7%BB%83%E4%B9%A0%E7%94%9F/" style="font-size: 1.3em; color: #99a1ac">-CodeWave练习生</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-03T05:31:34.735Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
     
-    
-      <header class="article-header">
-        
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/10/hello-world/" data-id="clyfjqoiy0000t4tedxvd0m8p" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/">-博客相关</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%83%E4%B9%A0/" rel="tag">-练习</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E7%BB%83%E4%B9%A0/" style="font-size: 10px;">-练习</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/07/11/first-blog/">first blog！！</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
